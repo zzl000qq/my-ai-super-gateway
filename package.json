@@ -1,4 +1,3 @@
-// filepath: package.json
 {
   "dependencies": {
     "@google/generative-ai": "^0.14.1",
