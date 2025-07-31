@@ -1,4 +1,3 @@
-// filepath: api/mistral.js
 const MistralClient = require('@mistralai/mistralai');
 const client = new MistralClient(process.env.MISTRAL_API_KEY);
 export default async function handler(req, res) {
