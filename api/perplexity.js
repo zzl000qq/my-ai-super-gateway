@@ -1,4 +1,3 @@
-// filepath: api/perplexity.js
 const { Perplexity } = require('@perplexity/pplx-sdk');
 const client = new Perplexity({ apiKey: process.env.PERPLEXITY_API_KEY });
 export default async function handler(req, res) {
