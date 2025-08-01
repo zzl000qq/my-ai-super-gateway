@@ -1,7 +1,7 @@
 const MistralClient = require('@mistralai/mistralai');
 const client = new MistralClient(process.env.MISTRAL_API_KEY);
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); if (req.method === 'OPTIONS') { return res.status(200).end(); }
+  res.setHeader('Access-Control-Allow-Origin', '*'); res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); if (req.method === 'OPTIONS') { return res.status(200).end(); }
   const { question } = req.body;
   const chatResponse = await client.chat({
     model: 'mistral-large-latest',
